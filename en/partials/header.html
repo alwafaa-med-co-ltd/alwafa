@@ -1,0 +1,33 @@
+<!-- Header Partial for AL-WAFA'A Medical Co. (Arabic fixed) -->
+<header class="site-header" role="banner" aria-roledescription="banner">
+  <section class="hero" aria-roledescription="carousel" role="region" aria-label="شريط العرض الرئيسي">
+
+    <!-- Slides container -->
+    <div class="slides" id="slider" tabindex="0" aria-live="polite">
+      <!-- Slides will be dynamically populated by JavaScript based on language -->
+    </div>
+
+    <!-- TOP-LABEL -->
+    <div class="top-label" id="top-label" role="img" aria-label="شريط العنوان">
+      <span class="visually-hidden" id="top-label-desc">صورة شريط العنوان</span>
+      <picture>
+        <!-- للموبايل -->
+        <source media="(max-width:640px)" srcset="assets/images/toplabel-mob.webp">
+        <!-- للديسكتوب -->
+        <img id="toplabel-img"
+             src="assets/images/toplabel.webp"
+             alt="شريط عنوان — شركة الوفاء الطبية"
+             loading="eager"
+             width="620"
+             height="284"
+             aria-hidden="false">
+      </picture>
+    </div>
+
+    <!-- Label text -->
+    <div class="label-text" id="label-text" role="button" tabindex="0" aria-pressed="false"></div>
+
+    <!-- Live region for screen readers -->
+    <div id="slider-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+  </section>
+</header>

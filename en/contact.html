@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Al-Wafaa Medical Co. — reach out for support and information about our services." />
+  <meta name="author" content="Al-Wafaa Medical Co., Ltd" />
+
+  <title>Contact Us — Al-Wafaa Medical</title>
+
+  <!-- Preloads -->
+  <link rel="preload" as="image" href="assets/images/backyelu.jpg">
+  <link rel="preload" as="image" href="assets/images/logo-en.svg">
+  <link rel="preload" as="font" href="assets/fonts/YaModernBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" as="font" href="assets/fonts/FFShamelFamily2.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+  /* ---------- Fonts ---------- */
+  @font-face{ font-family:'YaModernBold'; src:url('assets/fonts/YaModernBold.ttf') format('truetype'); font-weight:700; font-display:swap; }
+  @font-face{ font-family:'FFShamel'; src:url('assets/fonts/FFShamelFamily2.ttf') format('truetype'); font-weight:400; font-display:swap; }
+
+  /* ---------- Root variables (match Arabic page) ---------- */
+  :root{
+    --container-w:1220px;
+    --logo-w:360px;
+    --logo-top-margin:80px;
+    --accent-color:#214686; /* site blue */
+    --card-bg: rgba(33,70,134,0.0);
+    --card-radius:20px;
+    --gap-section:32px;
+    --muted-white:#fff;
+    --line-height:1px;
+    --line-color:rgba(255,255,255,0.25);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html, body{ height:100%; font-family:'FFShamel', Tahoma, Arial, sans-serif; color:var(--muted-white); }
+  html{
+    background:url("assets/images/backyelu.jpg") no-repeat center center fixed;
+    background-size:cover;
+  }
+
+  /* ---------- Page container ---------- */
+  .page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:var(--logo-top-margin);
+    padding-bottom:120px; /* space for bottom bar, matches Arabic */
+  }
+  .wrap{
+    width:100%;
+    max-width:var(--container-w);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:var(--gap-section);
+    padding: 0 18px;
+  }
+
+  /* ---------- Logo ---------- */
+  .logo{
+    width:var(--logo-w);
+    margin-bottom:50px;
+    animation: logoShake 8s infinite;
+  }
+  .logo img{ width:100%; height:auto; display:block; }
+  @keyframes logoShake{
+    0%, 20%, 100%{transform:translateY(0);} 
+    5%, 15%{transform:translateY(-10px);} 
+    10%{transform:translateY(-5px);} }
+
+  /* ---------- Card ---------- */
+  .card{
+    width:700px;
+    max-width:95vw;
+    background: var(--card-bg);
+    border-radius:var(--card-radius);
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+  }
+
+  /* ---------- Section Titles (same visual as Arabic) ---------- */
+  .section-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'YaModernBold';
+    font-size:24px;
+    gap:14px;
+    position:relative;
+    color:var(--muted-white);
+  }
+  .section-title i{ color:var(--accent-color); font-size:18px; }
+  .section-title::before,
+  .section-title::after{ content:''; flex:1; height:var(--line-height); background:var(--line-color); }
+  .section-title span{ padding:0 12px; }
+
+  /* ---------- Info Rows ---------- */
+  .info-row{ display:flex; align-items:center; gap:16px; margin:6px 0; font-size:16px; color:var(--muted-white); }
+  .info-row .pin{ width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#fff; color:var(--accent-color); }
+  .info-row .pin i{ font-size:20px; color:var(--accent-color); }
+  .info-row .text{ font-family:'FFShamel'; }
+
+  /* ---------- Company Name ---------- */
+  .company{ font-family:'YaModernBold'; font-size:18px; line-height:1.4; color:var(--muted-white); text-align:left; }
+  .address{ font-size:16px; line-height:1.6; font-family:'FFShamel'; color:var(--muted-white); text-align:left; }
+
+  /* ---------- Numbers Grid (LTR-friendly) ---------- */
+  .numbers{ display:flex; flex-direction:column; gap:14px; align-items:flex-start; }
+  .num-item{ display:flex; align-items:center; gap:14px; font-size:16px; justify-content:flex-start; width:100%; }
+  .num-item .icon-inner{ width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:50%; color:var(--accent-color); flex-shrink:0; }
+  .num-item .icon-inner i{ color:var(--accent-color); font-size:18px; }
+  .num-item .num{ font-family:Roboto, sans-serif; direction:ltr; font-size:16px; color:var(--muted-white); }
+
+  /* ---------- Divider ---------- */
+  .divider{ width:100%; height:1px; background:rgba(255,255,255,0.15); margin:18px 0; }
+
+  /* ---------- Branches ---------- */
+  .branches{ display:flex; flex-direction:column; gap:14px; align-items:flex-start; }
+  .branch{ display:flex; align-items:center; gap:10px; font-size:16px; font-family:'FFShamel'; color:var(--muted-white); }
+  .branch i{ background:#fff; color:var(--accent-color); padding:6px; border-radius:50%; cursor:pointer; font-size:18px; }
+
+  /* ---------- Socials (centered like Arabic) ---------- */
+  .socials{ display:flex; gap:24px; margin-top:12px; justify-content:center; }
+  .socials a{ width:52px; height:52px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:#fff; color:var(--accent-color); font-size:24px; text-decoration:none; }
+  .socials a i{ color:var(--accent-color); }
+  .socials a:hover{ transform:scale(1.1); transition:0.3s; }
+
+  /* ---------- Bottom Navigation (match Arabic topbar) ---------- */
+  .contact-topbar{
+    position:fixed;
+    bottom:0; left:0; right:0;
+    background:rgba(33,70,134,0.85);
+    backdrop-filter:blur(4px);
+    display:flex;
+    justify-content:center;
+    padding:10px 0;
+    z-index:1500;
+  }
+  .topbar-nav{display:flex; gap:24px;}
+  .topbar-btn{
+    width:50px; height:50px;
+    border-radius:50%;
+    border:none;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff;
+    color:var(--accent-color);
+    font-size:20px;
+    cursor:pointer;
+    text-decoration:none;
+  }
+  .topbar-btn:hover{transform:scale(1.1); transition:0.3s;}
+
+  /* ---------- Menu overlay styling (used by toggleNav) ---------- */
+  .nav-overlay { position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.85); z-index:2000; display:flex; align-items:center; justify-content:center; }
+  .nav-menu { background: #fff; padding: 30px; border-radius: 15px; min-width:320px; max-width:90vw; color:#214686; text-align:center; }
+  .nav-menu .nav-links{ display:flex; flex-direction:column; gap:10px; margin-top:8px; }
+  .nav-menu .nav-links a{ padding:10px; color:#214686; text-decoration:none; border-radius:6px; background:#f0f8ff; display:block; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:980px){ .card{ padding:32px; } .logo{ width:320px; } }
+  @media (max-width:420px){ .logo{ width:60vw; } .card{ padding:18px; font-size:15px; } .topbar-btn{ width:46px; height:46px; } }
+  </style>
+</head>
+<body>
+
+  <main class="page" role="main" aria-labelledby="contact-heading">
+    <div class="wrap">
+
+      <!-- Logo -->
+      <div class="logo" aria-hidden="false">
+        <img src="assets/images/logo-en.svg" alt="Al-Wafaa Medical Logo" onerror="this.src='assets/images/logo.svg'">
+      </div>
+
+      <!-- Contact Card (mirrors Arabic structure exactly but with English headings/text) -->
+      <article class="card" id="contact-card">
+
+        <!-- Full Address -->
+        <div class="section-title" id="contact-heading"><i class="fa-solid fa-location-dot"></i><span>Full Address</span></div>
+
+        <div class="company">
+          AL-WAFAA MEDICAL COMPANY LIMITED<br>
+          شركة الوفاء الطبية المحدودة
+        </div>
+        <p class="address">
+          AL-Zubieri Street<br>
+          Street No. 4, south of Bab Al-Balaqa Bridge<br>
+          Sana'a, Republic of Yemen.
+        </p>
+
+        <!-- PO Box -->
+        <div class="info-row">
+          <div class="pin" aria-hidden="true"><i class="fa-solid fa-inbox"></i></div>
+          <div class="text">P.O. Box: <strong style="font-family:Roboto,sans-serif; direction:ltr;">20637</strong></div>
+        </div>
+
+        <!-- Contact Numbers -->
+        <div class="section-title"><i class="fa-solid fa-phone"></i><span>Contact Numbers</span></div>
+        <div class="numbers" role="list" aria-label="Contact numbers">
+          <div class="num-item" role="listitem"><div class="icon-inner phone" aria-hidden="true"><i class="fa-solid fa-phone"></i></div><div class="num">01/514194</div></div>
+          <div class="num-item" role="listitem"><div class="icon-inner phone" aria-hidden="true"><i class="fa-solid fa-phone"></i></div><div class="num">01/247777</div></div>
+          <div class="num-item" role="listitem"><div class="icon-inner fax" aria-hidden="true"><i class="fa-solid fa-fax"></i></div><div class="num">01/504646</div></div>
+          <div class="num-item" role="listitem"><div class="icon-inner fax" aria-hidden="true"><i class="fa-solid fa-fax"></i></div><div class="num">01/240153</div></div>
+          <div class="num-item" role="listitem"><div class="icon-inner mobile" aria-hidden="true"><i class="fa-solid fa-mobile-screen-button"></i></div><div class="num"><a href="tel:+967781117299" style="color:inherit; text-decoration:none;">781117299</a></div></div>
+          <div class="num-item" role="listitem"><div class="icon-inner phone" aria-hidden="true"><i class="fa-solid fa-phone"></i></div><div class="num">01/513899</div></div>
+        </div>
+
+        <!-- Website & Emails -->
+        <div class="divider" role="separator" aria-hidden="true"></div>
+        <div class="info-row">
+          <div class="pin" aria-hidden="true"><i class="fa-solid fa-globe"></i></div>
+          <div class="text"><a href="https://www.alwafaamedical.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">www.alwafaamedical.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="pin" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+          <div class="text"><a href="mailto:info@alwafaamedical.com" style="color:inherit; text-decoration:none;">info@alwafaamedical.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="pin" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+          <div class="text"><a href="mailto:khalil.alahlasi@alwafaamedical.com" style="color:inherit; text-decoration:none;">khalil.alahlasi@alwafaamedical.com</a></div>
+        </div>
+
+        <!-- Branches -->
+        <div class="section-title"><i class="fa-solid fa-map-location-dot"></i><span>Our Branches</span></div>
+        <div class="branches" aria-label="Branches">
+          <div class="branch"><i class="fa-solid fa-map-pin" onclick="window.open('https://maps.app.goo.gl/oXWmoBPGpfu6GJ7z7','_blank')" aria-hidden="true"></i> Head Office</div>
+          <div class="branch"><i class="fa-solid fa-map-pin" onclick="window.open('https://maps.app.goo.gl/VKvLJJk27TNyKqHa7','_blank')" aria-hidden="true"></i> Main Showroom</div>
+          <div class="branch"><i class="fa-solid fa-map-pin" onclick="window.open('https://maps.app.goo.gl/F4pnuYSjmD9HEMcA8','_blank')" aria-hidden="true"></i> Ibb Branch — Behind Taj Spa Hotel, Street of Medicines No.2 — Main Street Nearby</div>
+        </div>
+
+        <!-- Socials -->
+        <div class="section-title"><i class="fa-brands fa-share-alt"></i><span>Follow Us</span></div>
+        <div class="socials" aria-label="Social media">
+          <a href="https://www.facebook.com/alwafaamedical" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alwafaamedical" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Bottom Navigation (same pattern & placement as Arabic) -->
+  <nav class="contact-topbar" role="navigation" aria-label="Bottom navigation">
+    <div class="topbar-nav">
+      <button class="topbar-btn" onclick="goBack()" title="Back" aria-label="Back">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
+      <a href="index.html" class="topbar-btn" title="Home" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+
+      <button class="topbar-btn" onclick="toggleNav()" title="Menu" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <script>
+    function goBack(){
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = 'index.html';
+    }
+
+    function toggleNav() {
+      // avoid opening multiple overlays
+      if (document.querySelector('.nav-overlay')) return;
+
+      const nav = document.createElement('div');
+      nav.className = 'nav-overlay';
+      nav.addEventListener('click', (e) => { if (e.target === nav) nav.remove(); });
+
+      const menu = document.createElement('div');
+      menu.className = 'nav-menu';
+      menu.innerHTML = `
+        <h3 style="margin-bottom: 20px; color: #214686;">Main Menu</h3>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="brands.html">Brands</a>
+        </div>
+        <button class="close-btn" type="button" style="margin-top: 20px; padding: 10px 20px; background: #d71920; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+      `;
+      menu.querySelector('.close-btn').addEventListener('click', () => nav.remove());
+
+      nav.appendChild(menu);
+      document.body.appendChild(nav);
+      // focus management
+      menu.querySelector('a')?.focus();
+    }
+
+    // Defensive runtime style enforcement to keep visual parity with Arabic page
+    window.addEventListener('load', () => {
+      const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent-color') || '#214686';
+      const icons = document.querySelectorAll('.info-row .pin i, .num-item .icon-inner i, .branch i, .socials a i, .topbar-btn i');
+      icons.forEach(ic => { ic.style.color = accent.trim(); });
+      const circles = document.querySelectorAll('.info-row .pin, .num-item .icon-inner, .branch i, .socials a, .topbar-btn');
+      circles.forEach(el => { el.style.background = '#fff'; });
+    });
+  </script>
+
+</body>
+</html>
